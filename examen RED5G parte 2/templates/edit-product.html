@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="col-md-5 offset-md-4">
+    <div class="card card-body">
+        <form action="/update/{{selected_product.id}}" method="POST">
+            
+            <div class="form-group">
+                <input type="text" name="tittle_edit" placeholder="Tittle" value="{{selected_product.tittle}}" class="form-control">                
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="description_edit" placeholder="Description" value="{{selected_product.description}}" class="form-control">                
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="value_edit" placeholder="Value" value="{{selected_product.value}}" class="form-control">                    
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="quantity_edit" placeholder="Quantity" value="{{selected_product.quantity}}" class="form-control">                    
+            </div>
+            
+            <div class="form-group pt-3">
+                <button type="submit" class="btn btn-success btn-block">
+                    Save
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

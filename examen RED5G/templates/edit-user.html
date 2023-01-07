@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="col-md-5 offset-md-4">
+    <div class="card card-body">
+        <form action="/update/{{selected_user.id}}" method="POST">
+            
+            <div class="form-group">
+                <input type="text" name="fullname_edit" placeholder="Fullname" value="{{selected_contact.fullname}}" class="form-control">                
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="phone_edit" placeholder="Phone" value="{{selected_contact.phone}}" class="form-control">                
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="email_edit" placeholder="Email" value="{{selected_contact.email}}" class="form-control">                    
+            </div>
+            
+            <div class="form-group pt-3">
+                <button type="submit" class="btn btn-success btn-block">
+                    Save
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
